@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:MVVMBasicPJK.Common.Converters"
+             x:Class="MVVMBasicPJK.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converter:UserNameConverter x:Key="nameConverter" />
+            <Color x:Key="backgroundColor">#547799</Color>
+            <Color x:Key="textColor">White</Color>
+            
+            <Color x:Key="Primary">#7F7F7F</Color>
+            <Color x:Key="PrimaryDark">#1976D2</Color>
+            <Color x:Key="Accent">#FF4081</Color>
+            <Color x:Key="LightBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="DarkGray">DarkGray</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="ActionBar">#2A2933</Color>
+
+            <!--공통 Background Color-->
+            <Color x:Key="BackColor">#F4F4F4</Color>
+            <Color x:Key="TitleBackColor">#F8485E</Color>
+            <Color x:Key="OverayBackColor">#90000000</Color>
+
+            <!--공통 Button Color-->
+            <Color x:Key="ActionButton">#33323E</Color>
+
+            <!--공통 팝업화면-->
+            <Color x:Key="PopTitleColor">#009591</Color>
+            <Color x:Key="PopBackColor">#F4F4F4</Color>
+            <Color x:Key="PopButtonColor">#3F3F3F</Color>
+
+            <!--리스트 조회화면-->
+            <Color x:Key="ListCondBackColor">#F2F2F2</Color>
+            <Color x:Key="ListBackColor">#FFFFFF</Color>
+            <Color x:Key="ListFooterColor">#36363D</Color>
+            <Color x:Key="ListSepColor">#000000</Color>
+            <Color x:Key="SearchButton">#33323E</Color>
+
+            <!--상세화면-->
+            <Color x:Key="DetTitleColor">#595959</Color>
+            <Color x:Key="DetBackColor">#FFFFFF</Color>
+            <Color x:Key="DetFrameBackColor">#F4F4F4</Color>
+
+            <!--로그인화면-->
+            <Color x:Key="LoginButton">#454545</Color>
+            <Color x:Key="InputBoxColor">#FFFFFF</Color>
+            <Color x:Key="holderColor">#94D1CA</Color>
+            <Color x:Key="RequestButton">#454545</Color>
+            <Color x:Key="ReqAuthButton">#F8485E</Color>
+            <Color x:Key="NoticeMessage">#373737</Color>
+            <Color x:Key="WarningTitleColor">#000000</Color>
+
+            <!--메인화면-->
+            <Color x:Key="MainButton">#3F3F3F</Color>
+            <Color x:Key="MainBackColor">#000000</Color>
+
+            <!--폰트색상-->
+            <Color x:Key="TxtMainTitleColor">#FFFFFF</Color>
+            <Color x:Key="TxtSubTitleColor">#FFFFFF</Color>
+            <Color x:Key="TxtPopTitleColor">#FFFFFF</Color>
+
+            <Color x:Key="TxtLoginColor">#000000</Color>
+            <Color x:Key="TxtListColor">#000000</Color>
+            <Color x:Key="TxtListFootColor">#FFFFFF</Color>
+            <Color x:Key="TxtDetailColor">#000000</Color>
+            <Color x:Key="TxtPopColor">#000000</Color>
+
+            <Color x:Key="TxtPopBtnColor">#FFFFFF</Color>
+            <Color x:Key="TxtDefaultBtnColor">#FFFFFF</Color>
+
+            <Color x:Key="TxtDefaultColor">#000000</Color>
+
+            <Color x:Key="CheckButton">#2A2933</Color>
+            <Color x:Key="ListFrameColor">#F2F2F2</Color>
+            <Color x:Key="PopupBackColor">#D9D9D9</Color>
+
+            <x:String x:Key="ExtCond">&#x23CF;</x:String>
+            <x:String x:Key="ListDot">&#x2022;</x:String>
+
+            <x:String x:Key="uncheckedBox">&#x2610;</x:String>
+            <x:String x:Key="checkedBox">&#x2611;</x:String>
+
+            <x:String x:Key="uncheckedRadio">&#x25CB;</x:String>
+            <x:String x:Key="checkedRadio">&#x25C9;</x:String>
+
+            <x:String x:Key="indicatorChar">&#x25B6;</x:String>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource TitleBackColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource TxtMainTitleColor}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

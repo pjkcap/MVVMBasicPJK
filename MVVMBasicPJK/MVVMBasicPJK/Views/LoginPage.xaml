@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:MVVMBasicPJK.Common.Behaviors"
+             x:Class="MVVMBasicPJK.Views.LoginPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         Padding="20,60,20,0" BackgroundColor="{StaticResource BackColor}">
+
+                <StackLayout BackgroundColor="{StaticResource BackColor}">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="usernameEntry" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                               TextColor="{StaticResource TxtLoginColor}"
+                               PlaceholderColor="{StaticResource holderColor}"
+                               WidthRequest="6" Placeholder="사용자ID">
+                            <Entry.Behaviors>
+                                <behaviors:EntryLengthValidatorBehavior MaxLength="20" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Entry x:Name="passwordEntry" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                               TextColor="{StaticResource TxtLoginColor}"
+                               PlaceholderColor="{StaticResource holderColor}"
+                               IsPassword="true" Placeholder="비밀번호">
+                            <Entry.Behaviors>
+                                <behaviors:EntryLengthValidatorBehavior MaxLength="20" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Entry x:Name="licenseNumEntry" Grid.Row="2" Grid.Column="0"
+                               TextColor="{StaticResource TxtLoginColor}"
+                               PlaceholderColor="{StaticResource holderColor}"
+                               Placeholder="인증번호"
+                               Keyboard="Numeric">
+                            <Entry.Behaviors>
+                                <behaviors:EntryLengthValidatorBehavior MaxLength="6" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Button x:Name="btnLicenseNum" Text="요청" TextColor="{StaticResource TxtDefaultBtnColor}" FontSize="Medium"
+                                Grid.Row="2" Grid.Column="1" 
+                                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                BackgroundColor="{StaticResource RequestButton}"
+                                Clicked="BtnLicenseNum_Clicked"/>
+                        <Button Text="로그인" 
+                                TextColor="{StaticResource TxtDefaultBtnColor}" FontSize="Medium"
+                                Grid.Row="3" 
+                                Grid.Column="0" 
+                                Grid.ColumnSpan="2" 
+                                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                BackgroundColor="{StaticResource LoginButton}" 
+                                Clicked="OnLoginButtonClicked" />
+                        <Label x:Name="edMessage" Text="{Binding InfoMessage}"
+                               Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               TextColor="{StaticResource NoticeMessage}"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource BackColor}"
+                             Padding="10,50,0,0">
+                    <Label Text="{Binding AppVer}" HorizontalOptions="End" TextColor="{StaticResource NoticeMessage}"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <ContentView x:Name="overIndicator"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        IsVisible="{Binding IsBusy}">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                             Margin="0,0,0,0"
+                             BackgroundColor="#50000000">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"
+                                 Margin="50,200,50,200"
+                                 BackgroundColor="Black">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Fill" HorizontalOptions="Fill"/>
+                            <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill" Orientation="Horizontal">
+                                <!--<ActivityIndicator x:Name="VersionIndicator" Margin="1,6,1,6" HorizontalOptions="Center" Color="White" IsVisible="True" IsEnabled="True" IsRunning="True"/>-->
+                                <Label Text="{StaticResource indicatorChar}" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text="{StaticResource indicatorChar}" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text="{StaticResource indicatorChar}" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text="{Binding IndicatorText}" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="2" VerticalOptions="Fill" HorizontalOptions="Fill"/>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+
+            </ContentView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
