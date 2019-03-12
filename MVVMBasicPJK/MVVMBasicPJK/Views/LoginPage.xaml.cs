@@ -38,33 +38,33 @@ namespace MVVMBasicPJK.Views
         {
             viewModel.InfoMessage = string.Empty;
 
-            //ID, PASSWORD 입력 체크
-            if (usernameEntry.Text.Trim().Length < 1)
-            {
-                await DisplayAlert("로그인", "아이디를 입력하세요.", "확인");
-                return;
-            }
-            if (passwordEntry.Text.Trim().Length < 1)
-            {
-                await DisplayAlert("로그인", "비밀번호를 입력하세요.", "확인");
-                return;
-            }
+            ////ID, PASSWORD 입력 체크
+            //if (usernameEntry.Text.Trim().Length < 1)
+            //{
+            //    await DisplayAlert("로그인", "아이디를 입력하세요.", "확인");
+            //    return;
+            //}
+            //if (passwordEntry.Text.Trim().Length < 1)
+            //{
+            //    await DisplayAlert("로그인", "비밀번호를 입력하세요.", "확인");
+            //    return;
+            //}
 
-            // OTP 인증 체크
-            if (licenseNumEntry.Text.Trim().Length < 1)
-            {
-                //메세지 출력 : 인증번호를 입력하세요
-                await DisplayAlert("로그인", "인증번호를 입력하세요.", "확인");
-                return;
-            }
+            //// OTP 인증 체크
+            //if (licenseNumEntry.Text.Trim().Length < 1)
+            //{
+            //    //메세지 출력 : 인증번호를 입력하세요
+            //    await DisplayAlert("로그인", "인증번호를 입력하세요.", "확인");
+            //    return;
+            //}
 
-            // OTP 형식체크(숫자6자리)
-            string pattern = @"^\d{6}$";
-            if (!System.Text.RegularExpressions.Regex.IsMatch(licenseNumEntry.Text, pattern))
-            {
-                await DisplayAlert("로그인", "인증번호는 숫자 6자리입니다.", "확인");
-                return;
-            }
+            //// OTP 형식체크(숫자6자리)
+            //string pattern = @"^\d{6}$";
+            //if (!System.Text.RegularExpressions.Regex.IsMatch(licenseNumEntry.Text, pattern))
+            //{
+            //    await DisplayAlert("로그인", "인증번호는 숫자 6자리입니다.", "확인");
+            //    return;
+            //}
 
             //SQL Injection 체크
             if (!(this.CheckInjection(this.usernameEntry.Text) || this.CheckInjection(this.passwordEntry.Text)))
