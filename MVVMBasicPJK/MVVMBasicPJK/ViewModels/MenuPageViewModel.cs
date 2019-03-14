@@ -21,16 +21,16 @@ namespace MVVMBasicPJK.ViewModels
         #region Property area
         public ObservableCollection<MainPageMenuItem> MenuItems { get; set; }
 
-        public MainPageMenuItem MenuSelectedItem
-        {
-            get { return menuSelectedItem; }
-            set { SetProperty(ref menuSelectedItem, value); }
-        }
+        //public MainPageMenuItem MenuSelectedItem
+        //{
+        //    get { return menuSelectedItem; }
+        //    set { SetProperty(ref menuSelectedItem, value); }
+        //}
 
         #endregion
 
         #region Constructor Area
-        public MenuPageViewModel(MenuPage parent)
+        public MenuPageViewModel()
         {
             MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
             {
@@ -38,8 +38,7 @@ namespace MVVMBasicPJK.ViewModels
                     new MainPageMenuItem { Id = MenuItemType.About, Title = "About", TargetType = typeof(AboutPage)},
                 });
 
-            //parent.ListView.SelectedItem = MenuItems[1];
-            MenuSelectedItem = MenuItems[0];
+            //MenuSelectedItem = MenuItems[0];
         }
         #endregion
 

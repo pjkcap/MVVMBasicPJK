@@ -8,14 +8,18 @@ namespace MVVMBasicPJK.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
-        public ListView ListView;
+        //public ListView ListView;
+        MenuPageViewModel viewModel;
 
         public MenuPage()
         {
             InitializeComponent();
 
-            ListView = MenuItemsListView;
-            BindingContext = new MenuPageViewModel(this);
+            //ListView = MenuItemsListView;
+
+            BindingContext = viewModel = new MenuPageViewModel();
+
+            MenuItemsListView.SelectedItem = viewModel.MenuItems[0];
         }
     }
 }
