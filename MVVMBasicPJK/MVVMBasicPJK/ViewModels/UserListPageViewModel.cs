@@ -26,7 +26,7 @@ namespace MVVMBasicPJK.ViewModels
     /// Xamarin.Forms.Maps 참조
     /// https://developer.xamarin.com/guides/xamarin-forms/user-interface/map/
     /// </remarks>
-    public class MainPageViewModel : BaseViewModel
+    public class UserListPageViewModel : BaseViewModel
     {
         #region private fields
         private INavigationService navigationService;
@@ -67,7 +67,7 @@ namespace MVVMBasicPJK.ViewModels
         #endregion
 
         #region Constructor Area
-        public MainPageViewModel()
+        public UserListPageViewModel()
         {
             this.navigationService = new NavigationService();
             this.userService = new UserService(new RequestProvider());

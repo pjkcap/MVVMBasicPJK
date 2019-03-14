@@ -20,7 +20,7 @@
 
             <!--공통 Background Color-->
             <Color x:Key="BackColor">#F4F4F4</Color>
-            <Color x:Key="TitleBackColor">#F8485E</Color>
+            <Color x:Key="TitleBackColor">#2196F3</Color>
             <Color x:Key="OverayBackColor">#90000000</Color>
 
             <!--공통 Button Color-->

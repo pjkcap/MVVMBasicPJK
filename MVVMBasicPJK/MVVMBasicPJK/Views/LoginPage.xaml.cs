@@ -84,7 +84,8 @@ namespace MVVMBasicPJK.Views
             if (isValid)
             {
                 App.IsUserLoggedIn = true;
-                App.Current.MainPage = new NavigationPage(new MainPage());
+                App.Current.MainPage = new MainPage();
+                //App.Current.MainPage = new NavigationPage(new MainPage());
             }
 
             viewModel.IsBusy = false;
