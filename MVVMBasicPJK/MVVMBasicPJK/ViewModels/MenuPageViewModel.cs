@@ -1,4 +1,5 @@
 ﻿using MVVMBasicPJK.Common.Helpers;
+using MVVMBasicPJK.Models;
 using MVVMBasicPJK.Views;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace MVVMBasicPJK.ViewModels
         #region private fields
         private Command<MainPageMenuItem> menuSelectedCommand;
         private MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        private MainPageMenuItem menuSelectedItem;
+        //private MainPageMenuItem menuSelectedItem;
         #endregion
 
         #region Property area
@@ -34,6 +35,7 @@ namespace MVVMBasicPJK.ViewModels
         {
             MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
             {
+                    new MainPageMenuItem { Id = MenuItemType.UserList, Title = "UseList", TargetType = typeof(UserListPage) },
                     new MainPageMenuItem { Id = MenuItemType.Page1, Title = "Page 1", TargetType = typeof(MainPageDetail) },
                     new MainPageMenuItem { Id = MenuItemType.About, Title = "About", TargetType = typeof(AboutPage)},
                 });

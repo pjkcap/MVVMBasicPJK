@@ -31,7 +31,12 @@ namespace MVVMBasicPJK.Common.Navigations
 
         private Page GetCurrentPage()
         {
-            var currentPage = Application.Current.MainPage.Navigation.NavigationStack.LastOrDefault();
+            Page currentPage;
+
+            if (Application.Current.MainPage is MasterDetailPage)
+                currentPage = ((MasterDetailPage)Application.Current.MainPage).Detail.Navigation.NavigationStack.LastOrDefault();
+            else
+                currentPage = Application.Current.MainPage.Navigation.NavigationStack.LastOrDefault();
 
             return currentPage;
         }

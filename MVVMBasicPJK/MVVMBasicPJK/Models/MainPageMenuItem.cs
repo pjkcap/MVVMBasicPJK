@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVVMBasicPJK.Views
+namespace MVVMBasicPJK.Models
 {
 
     public class MainPageMenuItem
@@ -21,6 +21,7 @@ namespace MVVMBasicPJK.Views
 
     public enum MenuItemType
     {
+        UserList,
         Page1,
         About
     }

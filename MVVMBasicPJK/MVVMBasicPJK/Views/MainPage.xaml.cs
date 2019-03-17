@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVMBasicPJK.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace MVVMBasicPJK.Views
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
-            MenuPages.Add((int)MenuItemType.Page1, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.UserList, (NavigationPage)Detail);
             //pageMenu.ListView.ItemSelected += ListView_ItemSelected;
         }
 
