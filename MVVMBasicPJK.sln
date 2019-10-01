@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMBasicPJK.Android", "MVVMBasicPJK\MVVMBasicPJK.Android\MVVMBasicPJK.Android.csproj", "{FE86C26D-B8BC-4469-839F-1B3FCEF84825}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMBasicPJK.iOS", "MVVMBasicPJK\MVVMBasicPJK.iOS\MVVMBasicPJK.iOS.csproj", "{F197B17C-3653-4178-B7F7-FB3B20009979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMBasicPJK", "MVVMBasicPJK\MVVMBasicPJK\MVVMBasicPJK.csproj", "{CEF31E20-36AD-4097-A278-D037D6CB5514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVVMBasicPJK", "MVVMBasicPJK\MVVMBasicPJK\MVVMBasicPJK.csproj", "{CEF31E20-36AD-4097-A278-D037D6CB5514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,7 +80,6 @@ Global
 		{F197B17C-3653-4178-B7F7-FB3B20009979}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
 		{F197B17C-3653-4178-B7F7-FB3B20009979}.AppStore|iPhoneSimulator.Deploy.0 = AppStore|iPhoneSimulator
 		{F197B17C-3653-4178-B7F7-FB3B20009979}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{F197B17C-3653-4178-B7F7-FB3B20009979}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{F197B17C-3653-4178-B7F7-FB3B20009979}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{F197B17C-3653-4178-B7F7-FB3B20009979}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{F197B17C-3653-4178-B7F7-FB3B20009979}.Debug|iPhone.Build.0 = Debug|iPhone

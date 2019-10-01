@@ -198,6 +198,7 @@ namespace MVVMBasicPJK.ViewModels
             }
             catch (Exception ex) when (ex is WebException || ex is HttpRequestException)
             {
+                Debug.WriteLine(ex.Message);
                 //await dialogService.DisplayAlertAsync("네트웍 에러 입니다.", "에러", "Ok");
             }
             catch (Exception ex)
